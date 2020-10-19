@@ -1,7 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<title>Welcomeddddd</title>
+<title>Welcome</title>
 </head>
 <body>
 	<nav class ="navbar navbar-expand navbar-dark bg-dark">

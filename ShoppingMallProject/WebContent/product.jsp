@@ -3,7 +3,7 @@
 <%@ page import="dao.ProductRepository" %>
 <html>
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>상품 상세 정보</title>
 </head>
 <body>
@@ -20,15 +20,19 @@
 	%>
 	<div class ="container">
 		<div class="row">
-			<div class ="col-md-6">
-				<h3><%=product.getPname() %></h3>
-				<p><%=product.getDescription() %>
-				<p><b>상품 코드 : </b><span class="badge badge-danger"><%=product.getProductId() %></span>
-				<p><b>제조사 </b> :<%=product.getManufacturer() %>
-				<p><b>분류</b> :<%=product.getCategory() %>
-				<p><b>재고 수 </b> :<%=product.getUnitsInStock() %>
-				<h4><%=product.getUnitPrice() %>원</h4>
-				<p><a href="#" class="btn btn-info">상품 주문</a> <a href="./products.jsp" class="btn btn-secondory">상품 목록</a>
+			<div class="col-md-5">
+			<img src="./resources/images/<%=product.getFilename()%>"
+				style = "width:100%" >
+			</div>
+				<div class ="col-md-6">
+					<h3><%=product.getPname() %></h3>
+					<p><%=product.getDescription() %>
+					<p><b>상품 코드 : </b><span class="badge badge-danger"><%=product.getProductId() %></span>
+					<p><b>제조사 </b> :<%=product.getManufacturer() %>
+					<p><b>분류</b> :<%=product.getCategory() %>
+					<p><b>재고 수 </b> :<%=product.getUnitsInStock() %>
+					<h4><%=product.getUnitPrice() %>원</h4>
+					<p><a href="#" class="btn btn-info">상품 주문</a> <a href="./products.jsp" class="btn btn-secondory">상품 목록</a>
 			</div>
 		</div>
 	</div>
